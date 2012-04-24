@@ -1,6 +1,7 @@
 #!/bin/bash
 
 DOTFILES=(
+  .zshrc .zshrc.alias .zshrc.osx .zshrc.linux
   .gitconfig .gitignore
 )
 
