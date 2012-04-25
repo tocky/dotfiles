@@ -5,8 +5,20 @@ DOTFILES=(
   .gitconfig .gitignore
 )
 
-echo "Create symbolic links..."
+echo "Install required libraries and packages..."
+case "${OSTYPE}" in
+# Mac(Unix)
+darwin*)
+  echo "TODO: Need implementation for Mac"
+  exit 1
+  ;;
+# Linux
+linux*)
+  sudo aptitude install language-pack-ja curl vim ctags tig
+  ;;
+esac
 
+echo "Create symbolic links..."
 for file in ${DOTFILES[@]}
 do
   if [[ -e ${HOME}/${file} ]]; then
@@ -22,3 +34,4 @@ do
 done
 
 echo "Setup process has done!"
+exit 0
