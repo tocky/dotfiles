@@ -3,6 +3,8 @@
 DOTFILES=(
   .zshrc .zshrc.alias .zshrc.osx .zshrc.linux
   .gitconfig .gitignore
+  .vimrc
+  .dir_colors
 )
 
 echo "Install required libraries and packages..."
