@@ -4,6 +4,8 @@ source ~/dotfiles/.vimrc.bundle
 source ~/dotfiles/.vimrc.basic
 " ステータスライン設定
 source ~/dotfiles/.vimrc.statusline
+" 表示関連
+source ~/dotfiles/.vimrc.apperance
 " プラグインごとの設定 Plugins
 source ~/dotfiles/.vimrc.plugins_setting
 
