@@ -1,5 +1,9 @@
-" vunlde.vimで管理してるpluginを読み込む
+" vunlde.vim で管理してる plugin を読み込む
 source ~/dotfiles/.vimrc.bundle
+" 基本設定
+source ~/dotfiles/.vimrc.basic
+" プラグインごとの設定 Plugins
+source ~/dotfiles/.vimrc.plugins_setting
 
 " ==================================================
 "
