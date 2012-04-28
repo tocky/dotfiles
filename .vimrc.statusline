@@ -5,6 +5,10 @@
 set laststatus=2
 " カーソルが何行目の何列目に置かれているかを表示する
 set ruler
+" 挿入モードのときのステータスラインカラー
+autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340 ctermfg=cyan
+" ノーマルモードのときのステータスラインカラー
+autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90 ctermfg=white
 
 
 " "-------------------------------------------------------------------------------
