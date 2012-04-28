@@ -15,6 +15,10 @@ Bundle 'mru.vim'
 Bundle 'buftabs'
 " タブエディタ風にバッファ管理ウィンドウを表示
 Bundle 'minibufexpl.vim'
+" Vim をいろいろ改善するためのプラグイン
+Bundle 'Shougo/unite.vim'
+" vimfiler によるファイル操作
+Bundle 'Shougo/vimfiler'
 " 補完 neocomplcache.vim: 究極の Vim 的補完環境
 Bundle 'Shougo/neocomplcache'
 " neocomplcache の sinpet 補完

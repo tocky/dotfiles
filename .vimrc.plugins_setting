@@ -41,6 +41,12 @@ let g:miniBufExplMaxSize = 10
 " :MtでMiniBufExplorerの表示トグル
 command! Mt :TMiniBufExplorer
 
+" --------------------------------------------------
+"  MiniBufExplorer
+" --------------------------------------------------
+" デフォルトファイラを netrw から vimfiler に変更
+let g:vimfiler_as_default_explorer = 1
+
 "
 " "-------------------------------------------------------------------------------
 " " プラグインごとの設定 Plugins
