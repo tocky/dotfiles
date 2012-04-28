@@ -7,10 +7,14 @@ call vundle#rc()
 " Vundle そのもの
 " 初回は vundle.vim を手動でインストール: git clone https://github.com/gmarik/vundle.git
 Bundle 'gmarik/vundle'
-" プロジェクトごとにファイルを管理する
+" プロジェクトごとにファイルを管理
 Bundle 'project.tar.gz'
-" 使用したファイルを MRU で表示する
+" 使用したファイルを MRU で表示
 Bundle 'mru.vim'
+" 常にバッファ番号を表示
+Bundle 'buftabs'
+" タブエディタ風にバッファ管理ウィンドウを表示
+Bundle 'minibufexpl.vim'
 " 補完 neocomplcache.vim: 究極の Vim 的補完環境
 Bundle 'Shougo/neocomplcache'
 " neocomplcache の sinpet 補完

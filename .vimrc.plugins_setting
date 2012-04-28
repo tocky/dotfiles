@@ -6,17 +6,40 @@
 "  project.vim
 " --------------------------------------------------
 " ファイルが選択されたらウィンドウを閉じる
-:let g:proj_flags = "imstc"
+let g:proj_flags = "imstc"
 " <Leader>P でプロジェクトをトグル開閉する
-:nmap <silent> <Leader>P <Plug>ToggleProject
+nmap <silent> <Leader>P <Plug>ToggleProject
 " <Leader>p でデフォルトプロジェクトを開く
-:nmap <silent> <Leader>p :Project<CR>
+nmap <silent> <Leader>p :Project<CR>
 " カレントディレクトリにプロジェクト管理ファイルがあったら読み込む
 if getcwd() != $HOME
     if filereadable(getcwd(). '/.vimprojects')
         Project .vimprojects
     endif
 endif
+
+" --------------------------------------------------
+"  buftabs.vim
+" --------------------------------------------------
+" ファイル名だけ表示
+let buftabs_only_basename = 1
+" ステータスラインに表示
+let buftabs_in_statusline = 1
+
+" --------------------------------------------------
+"  MiniBufExplorer
+" --------------------------------------------------
+" hjkl で移動
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplSplitBelow = 0  " Put new window above
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplSplitToEdge = 1
+let g:miniBufExplMaxSize = 10
+
+" :MtでMiniBufExplorerの表示トグル
+command! Mt :TMiniBufExplorer
 
 "
 " "-------------------------------------------------------------------------------
