@@ -9,6 +9,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " プロジェクトごとにファイルを管理する
 Bundle 'project.tar.gz'
+" 使用したファイルを MRU で表示する
+Bundle 'mru.vim'
 " 補完 neocomplcache.vim: 究極の Vim 的補完環境
 Bundle 'Shougo/neocomplcache'
 " neocomplcache の sinpet 補完
