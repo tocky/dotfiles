@@ -4,6 +4,22 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Vundle そのもの
+" 初回は vundle.vim を手動でインストール: git clone https://github.com/gmarik/vundle.git
+Bundle 'gmarik/vundle'
+" プロジェクトごとにファイルを管理する
+Bundle 'project.tar.gz'
+" 補完 neocomplcache.vim: 究極の Vim 的補完環境
+Bundle 'Shougo/neocomplcache'
+" neocomplcache の sinpet 補完
+Bundle 'Shougo/neocomplcache-snippets-complete'
+" 自分用のカラーテーマ
+Bundle 'tocky/vim-colors'
+
+filetype plugin indent on
+
+" ==================================================
+"
 " " Edit {{{
 "   " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
 "   Bundle 'scrooloose/nerdcommenter.git'
@@ -278,16 +294,3 @@ call vundle#rc()
 "
 " " }}}
 " "
-
-" 補完 neocomplcache.vim : 究極のVim的補完環境
-Bundle 'Shougo/neocomplcache'
-
-" neocomplcacheのsinpet補完
-Bundle 'Shougo/neocomplcache-snippets-complete'
-
-" 自分用のカラーテーマ
-Bundle 'tocky/vim-colors'
-
-Bundle 'gmarik/vundle'
-
-filetype plugin indent on
