@@ -92,7 +92,7 @@ alias perl='/opt/local/bin/perl'
 # export PYTHONSTARTUP=~/.pythonstartup
 
 # Ruby
-if [[ -s /Users/ozaki/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/share/refe
 
