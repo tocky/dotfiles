@@ -6,6 +6,8 @@ source ~/dotfiles/.vimrc.basic
 source ~/dotfiles/.vimrc.statusline
 " 表示関連
 source ~/dotfiles/.vimrc.apperance
+" 移動関連
+source ~/dotfiles/.vimrc.moving
 " プラグインごとの設定 Plugins
 source ~/dotfiles/.vimrc.plugins_setting
 
