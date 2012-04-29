@@ -42,22 +42,36 @@ let g:miniBufExplMaxSize = 10
 command! Mt :TMiniBufExplorer
 
 " --------------------------------------------------
-"  MiniBufExplorer
+"  vimfiler
 " --------------------------------------------------
 " デフォルトファイラを netrw から vimfiler に変更
 let g:vimfiler_as_default_explorer = 1
+
+" --------------------------------------------------
+"  zen-coding
+" --------------------------------------------------
+let g:user_zen_settings = {
+\  'lang': 'ja',
+\  'indentation': '\t',
+\  'html': {
+\    'indentation': '  ',
+\  },
+\  'css': {
+\    'filters': 'fc',
+\  }
+\}
 
 "
 " "-------------------------------------------------------------------------------
 " " プラグインごとの設定 Plugins
 " "-------------------------------------------------------------------------------
-" 
+"
 " "------------------------------------
 " " YankRing.vim
 " "------------------------------------
 " " Yankの履歴参照
 " nmap ,y ;YRShow<CR>
-" 
+"
 " "------------------------------------
 " " MiniBufExplorer
 " "------------------------------------
@@ -69,22 +83,22 @@ let g:vimfiler_as_default_explorer = 1
 " let g:miniBufExplModSelTarget=1
 " let g:miniBufExplSplitToEdge=1
 " let g:miniBufExplMaxSize = 10
-" 
+"
 " ":MtでMiniBufExplorerの表示トグル
 " command! Mt :TMiniBufExplorer
-" 
+"
 " "------------------------------------
 " " Align
 " "------------------------------------
 " " Alignを日本語環境で使用するための設定
 " let g:Align_xstrlen = 3
-" 
+"
 " "------------------------------------
 " " VTreeExplorer
 " "------------------------------------
 " " 縦に表示する
 " let g:treeExplVertical=1
-" 
+"
 " "------------------------------------
 " " NERD_commenter.vim
 " "------------------------------------
@@ -94,7 +108,7 @@ let g:vimfiler_as_default_explorer = 1
 " map <Leader>x, c<space>
 " ""未対応ファイルタイプのエラーメッセージを表示しない
 " let NERDShutUp=1
-" 
+"
 " " ------------------------------------
 " " grep.vim
 " "------------------------------------
@@ -111,13 +125,13 @@ let g:vimfiler_as_default_explorer = 1
 " let g:surround_{char2nr('e')} = "begin \r end"
 " let g:surround_{char2nr('d')} = "do \r end"
 " let g:surround_{char2nr("-")} = ":\r"
-" 
+"
 " "------------------------------------
 " " smartchr.vim
 " "------------------------------------
 " " inoremap <expr> = smartchr#loop('=', '==', '=>')
 " " inoremap <expr> . smartchr#loop('.',  '->', '=>')
-" 
+"
 " "
 " " " 演算子の間に空白を入れる
 " " inoremap <buffer><expr> + smartchr#one_of(' + ', ' ++ ', '+')
@@ -137,22 +151,22 @@ let g:vimfiler_as_default_explorer = 1
 " " " 3項演算子の場合は、後ろのみ空白を入れる
 " " inoremap <buffer><expr> ? smartchr#one_of('? ', '?')
 " " " inoremap <buffer><expr> : smartchr#one_of(': ', '::', ':')
-" 
+"
 " " " =の場合、単純な代入や比較演算子として入力する場合は前後にスペースをいれる。
 " " " 複合演算代入としての入力の場合は、直前のスペースを削除して=を入力
 " " inoremap <buffer><expr> = search('¥(&¥<bar><bar>¥<bar>+¥<bar>-¥<bar>/¥<bar>>¥<bar><¥) ¥%#', 'bcn')? '<bs>= '  : search('¥(*¥<bar>!¥)¥%#', 'bcn') ? '= '  : smartchr#one_of(' = ', ' == ', '=')
-" 
+"
 " " " 下記の文字は連続して現れることがまれなので、二回続けて入力したら改行する
 " " inoremap <buffer><expr> } smartchr#one_of('}', '}<cr>')
 " " inoremap <buffer><expr> ; smartchr#one_of(';', ';<cr>')
 " " "()は空白入れる
 " " inoremap <buffer><expr> ( smartchr#one_of('( ')
 " " inoremap <buffer><expr> ) smartchr#one_of(' )')
-" 
+"
 " " " if文直後の(は自動で間に空白を入れる
 " " inoremap <buffer><expr> ( search('¥<¥if¥%#', 'bcn')? ' (': '('
-" 
-" 
+"
+"
 " "------------------------------------
 " " Fugitive.vim
 " "------------------------------------
@@ -163,14 +177,14 @@ let g:vimfiler_as_default_explorer = 1
 " nnoremap <Space>gc :<C-u>Gcommit<Enter>
 " nnoremap <Space>gC :<C-u>Git commit --amend<Enter>
 " nnoremap <Space>gb :<C-u>Gblame<Enter>
-" 
-" 
+"
+"
 " "------------------------------------
 " " BufExplorer
 " "------------------------------------
 " "<Leader>l<Space>でBufferList
 " nnoremap <Leader>l<Space> :BufExplorer<CR>
-" 
+"
 " "------------------------------------
 " " VTreeExplorer
 " "------------------------------------
@@ -179,7 +193,7 @@ let g:vimfiler_as_default_explorer = 1
 " noremap <Leader>t<Space> :VSTreeExplore<CR>
 " "分割したウィンドウのサイズ
 " let g:treeExplWinSize=30
-" 
+"
 " "------------------------------------
 " " DumbBuf.vim
 " "------------------------------------
@@ -194,7 +208,7 @@ let g:vimfiler_as_default_explorer = 1
 " let dumbbuf_updatetime  = 1    " &updatetimeの最小値
 " let dumbbuf_wrap_cursor = 0
 " let dumbbuf_remove_marked_when_close = 1
-" 
+"
 " "------------------------------------
 " " vim-indent-guides
 " "------------------------------------
@@ -211,12 +225,12 @@ let g:vimfiler_as_default_explorer = 1
 "     hi IndentGuidesOdd  ctermbg=white
 "     hi IndentGuidesEven ctermbg=lightgrey
 " endif
-" 
+"
 " "------------------------------------
 " " gundo.Vim
 " "------------------------------------
 " " nmap U :<C-u>GundoToggle<CR>
-" 
+"
 " "------------------------------------
 " " taglist.Vim
 " "------------------------------------
@@ -234,7 +248,7 @@ let g:vimfiler_as_default_explorer = 1
 " "map <silent> <leader>tl :Tlist<CR>        " taglistを開くショットカットキー
 " nmap <F7> :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
 " nmap <Leader>tl :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
-" 
+"
 " "------------------------------------
 " " Srcexp
 " "------------------------------------
@@ -246,30 +260,30 @@ let g:vimfiler_as_default_explorer = 1
 " let g:SrcExpl_GoBackMapKey  = "<C-b>"   " 戻る機能のMAP
 " " Source Explorerの機能ON/OFF
 " " nmap <F8> :CMiniBufExplorer<CR>:SrcExplToggle<CR>:TMiniBufExplorer<CR>
-" 
+"
 " "------------------------------------
 " " open-blowser.vim
 " "------------------------------------
-" 
+"
 " " カーソル下のURLをブラウザで開く
 " nmap <Leader>fu <Plug>(openbrowser-open)
 " vmap <Leader>fu <Plug>(openbrowser-open)
 " " カーソル下のキーワードをググる
 " nnoremap <Leader>fs :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>
-" 
+"
 " "------------------------------------
 " " operator-camelize.vim
 " "------------------------------------
 " " camel-caseへの変換
 " map <Leader>u <Plug>(operator-camelize)
 " map <Leader>U <Plug>(operator-decamelize)
-" 
+"
 " "------------------------------------
 " " operator-replace.vim
 " "------------------------------------
 " " RwなどでYankしてるもので置き換える
 " map R <Plug>(operator-replace)
-" 
+"
 " "------------------------------------
 " " sumartword.vim
 " "------------------------------------
@@ -277,17 +291,17 @@ let g:vimfiler_as_default_explorer = 1
 " noremap ,b  b
 " noremap ,e  e
 " noremap ,ge  ge
-" 
+"
 " map W  <Plug>(smartword-w)
 " map B  <Plug>(smartword-b)
 " map E  <Plug>(smartword-e)
 " map ge  <Plug>(smartword-ge)
-" 
-" 
+"
+"
 " "------------------------------------
 " " camelcasemotion.vim
 " "------------------------------------
-" 
+"
 " " <Shift-wbe>でCameCaseやsnake_case単位での単語移動
 " map <silent> w <Plug>CamelCaseMotion_w
 " map <silent> b <Plug>CamelCaseMotion_b
@@ -299,28 +313,28 @@ let g:vimfiler_as_default_explorer = 1
 " xmap <silent> ib <Plug>CamelCaseMotion_ib
 " omap <silent> ie <Plug>CamelCaseMotion_ie
 " xmap <silent> ie <Plug>CamelCaseMotion_ie
-" 
+"
 " "------------------------------------
 " " vimshell
 " "------------------------------------
 " let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 " let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
 " let g:vimshell_enable_smart_case = 1
-" 
+"
 " if has('win32') || has('win64')
 "   " Display user name on Windows.
 "   let g:vimshell_prompt = $USERNAME."% "
 " else
 "   " Display user name on Linux.
 "   let g:vimshell_prompt = $USER."% "
-" 
+"
 "   call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
 "   call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
 "   let g:vimshell_execute_file_list['zip'] = 'zipinfo'
 "   call vimshell#set_execute_file('tgz,gz', 'gzcat')
 "   call vimshell#set_execute_file('tbz,bz2', 'bzcat')
 " endif
-" 
+"
 " function! g:my_chpwd(args, context)
 "   call vimshell#execute('echo "chpwd"')
 " endfunction
@@ -333,13 +347,13 @@ let g:vimfiler_as_default_explorer = 1
 " endfunction
 " function! g:my_preexec(cmdline, context)
 "   call vimshell#execute('echo "preexec"')
-" 
+"
 "   if a:cmdline =~# '^\s*diff\>'
 "     call vimshell#set_syntax('diff')
 "   endif
 "   return a:cmdline
 " endfunction
-" 
+"
 " autocmd FileType vimshell
 " \ call vimshell#altercmd#define('g', 'git')
 " \| call vimshell#altercmd#define('i', 'iexe')
@@ -349,19 +363,19 @@ let g:vimfiler_as_default_explorer = 1
 " \| call vimshell#hook#set('emptycmd', ['g:my_emptycmd'])
 " \| call vimshell#hook#set('preprompt', ['g:my_preprompt'])
 " \| call vimshell#hook#set('preexec', ['g:my_preexec'])
-" 
+"
 " command! Vs :VimShell
-" 
-" 
+"
+"
 " "------------------------------------
 " " unite.vim
 " "------------------------------------
 " " The prefix key.
 " nnoremap    [unite]   <Nop>
 " nmap    f [unite]
-" 
+"
 " nnoremap [unite]u  :<C-u>Unite -no-split<Space>
-" 
+"
 " " 全部乗せ
 " nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file<CR>
 " " ファイル一覧
@@ -374,9 +388,9 @@ let g:vimfiler_as_default_explorer = 1
 " nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
 " " 現在のバッファのカレントディレクトリからファイル一覧
 " nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
-" 
+"
 " " nnoremap <silent> [unite]b  :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
-" 
+"
 " let g:yankring_zap_keys = ""
 " " from basyura/unite-rails
 " nnoremap <silent> [unite]rm  :<C-u>Unite -no-split rails/model<CR>
@@ -385,12 +399,12 @@ let g:vimfiler_as_default_explorer = 1
 " nnoremap <silent> [unite]rl  :<C-u>Unite -no-split rails/lib<CR>
 " nnoremap <silent> [unite]rj  :<C-u>Unite -no-split rails/javascript<CR>
 " nnoremap <silent> [unite]rs  :<C-u>Unite -no-split rails/spec<CR>
-" 
-" 
+"
+"
 " autocmd FileType unite call s:unite_my_settings()
 " function! s:unite_my_settings()"{{{
 "   " Overwrite settings.
-" 
+"
 "   " ESCキーを2回押すと終了する
 "   nmap <buffer> <ESC>      <Plug>(unite_exit)
 "   nmap <buffer> <ESC><ESC> <Plug>(unite_exit)
@@ -399,22 +413,22 @@ let g:vimfiler_as_default_explorer = 1
 "   imap <buffer> <C-w>     <Plug>(unite_delete_backward_path)
 "   " Start insert.
 "   let g:unite_enable_start_insert = 1
-" 
+"
 "   " ウィンドウを分割して開く
 "   nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
 "   inoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
-" 
+"
 "   " ウィンドウを縦に分割して開く
 "   nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
 "   inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
 " endfunction"}}}
-" 
+"
 " let g:unite_source_file_mru_limit = 200
-" 
+"
 " " unite-plugins
 " cnoremap UH Unite help<Enter>
 " cnoremap UO Unite outline<Enter>
-" 
+"
 " "------------------------------------
 " " quickrun.vim
 " "------------------------------------
@@ -423,7 +437,7 @@ let g:vimfiler_as_default_explorer = 1
 " " Pydiction
 " "------------------------------------
 " let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
-" 
+"
 " "------------------------------------
 " " Syntastic
 " "------------------------------------
@@ -431,12 +445,12 @@ let g:vimfiler_as_default_explorer = 1
 " let g:syntastic_enable_signs = 1
 " " 可能ならhighligt表示する
 " let g:syntastic_enable_highlighting = 1
-" 
+"
 " "------------------------------------
 " " toggle.vim
 " "------------------------------------
 " imap <C-A> <Plug>ToggleI
 " nmap <C-A> <Plug>ToggleN
 " vmap <C-A> <Plug>ToggleV
-" 
+"
 " let g:toggle_pairs = { 'and':'or', 'or':'and', 'if':'unless', 'unless':'if', 'yes':'no', 'no':'yes', 'enable':'disable', 'disable':'enable', 'pick':'reword', 'reword':'fixup', 'fixup':'squash', 'squash':'edit', 'edit':'exec', 'exec':'pick' }
