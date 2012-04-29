@@ -17,6 +17,8 @@ Bundle 'buftabs'
 Bundle 'minibufexpl.vim'
 " 外部 grep を利用
 Bundle 'grep.vim'
+" zen-coding を利用
+Bundle 'mattn/zencoding-vim'
 " Vim をいろいろ改善するためのプラグイン
 Bundle 'Shougo/unite.vim'
 " vimfiler によるファイル操作
