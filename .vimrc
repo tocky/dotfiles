@@ -8,8 +8,12 @@ source ~/dotfiles/.vimrc.statusline
 source ~/dotfiles/.vimrc.indent
 " 表示関連
 source ~/dotfiles/.vimrc.apperance
+" 補完関連
+source ~/dotfiles/.vimrc.completion
 " 移動関連
 source ~/dotfiles/.vimrc.moving
+" Color関連
+source ~/dotfiles/.vimrc.colors
 " 編集関連
 source ~/dotfiles/.vimrc.editing
 " エンコーディング関連
