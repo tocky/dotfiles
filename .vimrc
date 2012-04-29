@@ -4,6 +4,8 @@ source ~/dotfiles/.vimrc.bundle
 source ~/dotfiles/.vimrc.basic
 " ステータスライン設定
 source ~/dotfiles/.vimrc.statusline
+" インデント設定
+source ~/dotfiles/.vimrc.indent
 " 表示関連
 source ~/dotfiles/.vimrc.apperance
 " 移動関連
