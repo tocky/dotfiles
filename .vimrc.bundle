@@ -15,6 +15,8 @@ Bundle 'mru.vim'
 Bundle 'buftabs'
 " タブエディタ風にバッファ管理ウィンドウを表示
 Bundle 'minibufexpl.vim'
+" 外部 grep を利用
+Bundle 'grep.vim'
 " Vim をいろいろ改善するためのプラグイン
 Bundle 'Shougo/unite.vim'
 " vimfiler によるファイル操作
