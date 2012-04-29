@@ -12,6 +12,8 @@ source ~/dotfiles/.vimrc.apperance
 source ~/dotfiles/.vimrc.completion
 " 移動関連
 source ~/dotfiles/.vimrc.moving
+" 検索関連
+source ~/dotfiles/.vimrc.search
 " Color関連
 source ~/dotfiles/.vimrc.colors
 " 編集関連
