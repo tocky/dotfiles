@@ -19,6 +19,8 @@ Bundle 'minibufexpl.vim'
 Bundle 'grep.vim'
 " zen-coding を利用
 Bundle 'mattn/zencoding-vim'
+" ソースコードをコメントアウトする
+Bundle 'tomtom/tcomment_vim'
 " Vim をいろいろ改善するためのプラグイン
 Bundle 'Shougo/unite.vim'
 " vimfiler によるファイル操作
