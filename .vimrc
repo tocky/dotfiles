@@ -8,6 +8,10 @@ source ~/dotfiles/.vimrc.statusline
 source ~/dotfiles/.vimrc.apperance
 " 移動関連
 source ~/dotfiles/.vimrc.moving
+" 編集関連
+source ~/dotfiles/.vimrc.editing
+" エンコーディング関連
+source ~/dotfiles/.vimrc.encoding
 " プラグインごとの設定 Plugins
 source ~/dotfiles/.vimrc.plugins_setting
 
