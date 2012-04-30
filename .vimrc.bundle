@@ -14,7 +14,7 @@ Bundle 'mru.vim'
 " 常にバッファ番号を表示
 Bundle 'buftabs'
 " タブエディタ風にバッファ管理ウィンドウを表示
-Bundle 'minibufexpl.vim'
+" Bundle 'minibufexpl.vim'
 " 外部 grep を利用
 Bundle 'grep.vim'
 " zen-coding を利用
