@@ -19,6 +19,8 @@ Bundle 'minibufexpl.vim'
 Bundle 'grep.vim'
 " zen-coding を利用
 Bundle 'mattn/zencoding-vim'
+" CoffeeScript ソース編集用
+Bundle 'kchmck/vim-coffee-script'
 " ソースコードをコメントアウトする
 Bundle 'tomtom/tcomment_vim'
 " Vim をいろいろ改善するためのプラグイン
