@@ -28,3 +28,6 @@ export INFOPATH
 
 # export PATH=$PATH:$HOME/.gem/ruby/1.8/bin
 # export PATH=/opt/firefox:$PATH
+
+# pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
