@@ -96,6 +96,9 @@ alias perl='/opt/local/bin/perl'
 
 export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/share/refe
 
+# pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+
 # Go Lang
 # export GOROOT=$HOME/dev/go
 # export GOOS=darwin
