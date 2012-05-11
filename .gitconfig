@@ -18,6 +18,12 @@
   editor = vim
   quotepath = false
 
+[diff]
+  external = git_diff_wrapper
+
+[pager]
+  diff =
+
 [merge]
   tool = vimdiff
 

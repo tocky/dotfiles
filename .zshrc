@@ -547,6 +547,10 @@ function __rm_single_file(){
   fi
 }
 
+function git_diff() {
+  git diff --no-ext-diff -w "$@" | vim -R -
+}
+
 ## alias設定
 #
 [ -f ~/dotfiles/.zshrc.alias ] && source ~/dotfiles/.zshrc.alias
