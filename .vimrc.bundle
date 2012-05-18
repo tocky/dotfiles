@@ -33,6 +33,8 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-snippets-complete'
 " 自分用のカラーテーマ
 Bundle 'tocky/vim-colors'
+" Rails 用の Unite プラグイン
+Bundle 'basyura/unite-rails'
 
 filetype plugin indent on
 
