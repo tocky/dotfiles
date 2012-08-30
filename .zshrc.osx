@@ -79,7 +79,7 @@ export INFOPATH
 # export PATH=$PATH:$GAEJ_HOME/bin
 
 # Perl
-alias perl='/opt/local/bin/perl'
+# alias perl='/opt/local/bin/perl'
 
 # Python
 # alias python='/usr/local/bin/python'
