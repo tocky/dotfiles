@@ -29,12 +29,12 @@ alias 'mn'='make native-code'
 alias 'mc'='make clean'
 
 # screen
-alias s='screen -U'
-alias sc='screen -S main'
-alias sn='screen'
-alias sl='screen -ls'
-alias sr='screen -r main'
-alias srr='screen -U -D -RR'
+# alias s='screen -U'
+# alias sc='screen -S main'
+# alias sn='screen'
+# alias sl='screen -ls'
+# alias sr='screen -r main'
+# alias srr='screen -U -D -RR'
 
 # tmux
 alias tm='tmux'
