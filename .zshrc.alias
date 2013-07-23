@@ -64,6 +64,9 @@ alias gosh='nocorrect gosh'
 alias node='nocorrect node'
 alias hg='nocorrect hg --encoding=utf-8'
 
+# tig
+alias ts='tig status'
+
 # scala
 alias scala='scala -deprecation -unchecked -explaintypes'
 alias scc='scalac -deprecation -unchecked -explaintypes'
