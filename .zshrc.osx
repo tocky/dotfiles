@@ -3,6 +3,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:~/bin:$PATH
 
 # osx alias
 alias pbc='pbcopy'
+alias rm='rmtrash' # Need to install rmtrash using homebrew
 
 # Terminal Colorの設定
 export CLICOLOR=1
@@ -92,7 +93,7 @@ export INFOPATH
 # export PYTHONSTARTUP=~/.pythonstartup
 
 # rvm
-export PATH=$PATH:$HOME/.rvm/bin
+# export PATH=$PATH:$HOME/.rvm/bin
 
 export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/share/refe
 
@@ -132,8 +133,12 @@ export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/
 
 # export PATH=$PATH:/$ORACLE_HOME/bin
 
-# tmux
-alias tmux='tmuxx'
-alias tm='tmuxx'
-alias tma='tmux attach'
-alias tml='tmux list-window'
+# EC2
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+
+# Homebrew Cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
