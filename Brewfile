@@ -25,6 +25,8 @@ install npm || true
 install rbenv || true
 install ruby-build || true
 install rbenv-gemset || true
+install markdown || true
+install nkf || true
 # Cask packages
 cask install iterm2 || true
 cask install alfred || true
@@ -50,4 +52,4 @@ cask install marked || true
 cask install karabiner || true
 cask install gyazo || true
 cask install atom || true
-
+cask install kobito || true
