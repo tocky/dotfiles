@@ -1,6 +1,6 @@
 [user]
-	name = Shin Tokiwa
-	email = shin.tokiwa@zealot.co.jp
+  name = Shin Tokiwa
+  email = shin.tokiwa@zealot.co.jp
 
 [color]
   status = auto
@@ -13,7 +13,7 @@
   default = tracking
 
 [core]
-	excludesfile = /Users/tocky/.gitignore
+  excludesfile = /Users/tocky/.gitignore
   autocrlf = input
   editor = vim
   quotepath = false
@@ -149,11 +149,14 @@
 [tig "bind"]
   generic = g move-first-line
   generic = G move-last-line
-  generic = ^F move-page-down
-  generic = ^B move-page-up
+  generic = <Ctrl-F> move-page-down
+  generic = <Ctrl-B> move-page-up
+
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+
