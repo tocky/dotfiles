@@ -53,3 +53,5 @@ cask install karabiner || true
 cask install gyazo || true
 cask install atom || true
 cask install kobito || true
+cask install sourcetree || true
+
