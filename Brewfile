@@ -2,6 +2,8 @@
 tap homebrew/versions || true
 tap phinze/homebrew-cask || true
 tap homebrew/binary || true
+tap homebrew/dupes || true
+tap rcmdnk/rcmdnkcask || true
 # Brew update
 update || true
 # Brew Cask
@@ -27,7 +29,15 @@ install ruby-build || true
 install rbenv-gemset || true
 install markdown || true
 install nkf || true
+install mysql
+install imagemagick
+install go
+# Captcha
+install ghostscript
+# Detecting filetype
+install libmagic
 # Cask packages
+cask install witch || true
 cask install iterm2 || true
 cask install alfred || true
 # cask install dash || true
@@ -54,4 +64,4 @@ cask install gyazo || true
 cask install atom || true
 cask install kobito || true
 cask install sourcetree || true
-
+cask install macvim-kaoriya || true

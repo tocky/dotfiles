@@ -13,7 +13,7 @@
   default = tracking
 
 [core]
-  excludesfile = /Users/tocky/.gitignore
+	excludesfile = /Users/tocky/.gitignore
   autocrlf = input
   editor = vim
   quotepath = false
@@ -135,6 +135,7 @@
   ffl = flow feature list
   ffs = flow feature start
   fff = flow feature finish
+  fft = flow feature track
   ffc = flow feature checkout
   fr = flow release
   fh  = flow hotfix
@@ -153,10 +154,10 @@
   generic = <Ctrl-B> move-page-up
 
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 
